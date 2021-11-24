@@ -1,0 +1,55 @@
+
+.J1-container {
+    transform: translateY(25%);
+    background-color: turquoise;
+    padding: 4%;
+}
+
+.J1-header {
+    text-align: center;
+    color: white;
+}
+
+.J1-header h1 {
+    margin: 0px;
+    font-size: 70px;
+}
+
+.J1-header h5 {
+    margin: 0px;
+    font-size: 20px;
+}
+
+.filter {
+    font-size: 30px;
+    margin-top: 70px;
+    margin-left: 80px;
+}
+.multi-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px;
+}
+.tamplate-container {
+    padding: 10px;
+    margin: 5px;
+    width: 290px;
+    height: 213px;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin-bottom: 10px;
+    
+}
+.tamplate-container img{
+    border-radius: 50px;
+    width:80px;
+    padding:10px;
+}
+.img-loc {
+    display: flex;
+}
+.detail{
+    margin-left: 40px;
+
+}
