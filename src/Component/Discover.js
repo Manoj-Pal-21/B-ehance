@@ -6,55 +6,55 @@ const Discover = () => {
     const card = [
         {
             sname: "card1",
-            imgsrc: "../images/Boat9.png",
+            imgsrc: "../Images/Boat9.png",
             title: "Fishermen of Tyre South Lebanon",
             author: "Rick Bajotnas"
         },
         {
             sname: "card2",
-            imgsrc: "../images/Boat10.png",
+            imgsrc: "../Images/Boat10.png",
             title: "New Yock New Yorkers",
             author: "Rick Bajotnas"
         },
         {
             sname: "card2",
-            imgsrc: "../images/Boat11.png",
+            imgsrc: "../Images/Boat11.png",
             title: "Ethiopian Streets",
             author: "Rick Bajotnas"
         },
         {
             sname: "card3",
-            imgsrc: "../images/Boat12.png",
+            imgsrc: "../Images/Boat12.png",
             title: "After The Coal Mine",
             author: "Rick Bajotnas"
         },
         {
             sname: "card4",
-            imgsrc: "../images/Boat13.png",
+            imgsrc: "../Images/Boat13.png",
             title: "Bananas",
             author: "Rick Bajotnas"
         },
         {
             sname: "card5",
-            imgsrc: "../images/Boat14.png",
+            imgsrc: "../Images/Boat14.png",
             title: "Brazil",
             author: "Rick Bajotnas"
         },
         {
             sname: "card6",
-            imgsrc: "../images/Boat15.png",
+            imgsrc: "../Images/Boat15.png",
             title: "Vietnam",
             author: "Jeffey Weiss"
         },
         {
             sname: "card7",
-            imgsrc: "../images/Boat16.png",
+            imgsrc: "../Images/Boat16.png",
             title: "Energy & Photography",
             author: "Kristoper Grunert"
         },
         {
             sname: "card8",
-            imgsrc: "../images/Boat17.png",
+            imgsrc: "../Images/Boat17.png",
             title: "Valture Culture",
             author: "Nope"
         }
