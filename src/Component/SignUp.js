@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+import {withRouter} from 'react-router-dom';
 import "./Form.css";
 
 class SignUp extends React.Component {
     constructor(props) {
         super(props)
+
         this.state = {
             name:"",
             email:"",
@@ -20,8 +22,10 @@ class SignUp extends React.Component {
 
     onSubmit = (event) => {
         event.preventDefault();
-        console.log(this.state);
-        this.props.history.push("/Login");
+        if( this.state.name !== "" && this.state.email !== "" && this.state.password !== "" ){
+            this.props.history.push("/login")
+        }
+        // console.log(this.state);
     }
 
 
@@ -34,15 +38,15 @@ class SignUp extends React.Component {
                         <form className="form-wrapper">
                             <div className="name">
                                 <label className="label">Full Name</label>
-                                <input className="input" type="name" name="name" onChange={this.handleInput}/>
+                                <input className="input" type="name" name="name" required="true" onChange={this.handleInput}/>
                             </div>
                             <div className="email">
                                 <label className="label">Email</label>
-                                <input className="input" type="email" name="email" onChange={this.handleInput} />
+                                <input className="input" type="email" name="email" required="true" onChange={this.handleInput} />
                             </div>
                             <div className="password">
                                 <label className="label">Password</label>
-                                <input className="input" type="password" name="password" onChange={this.handleInput} />
+                                <input className="input" type="password" name="password" required="true" onChange={this.handleInput} />
                             </div>
                             <div>
                                 <button className="submit" onClick={this.onSubmit}>
@@ -60,4 +64,4 @@ class SignUp extends React.Component {
 
 
 
-export default SignUp
+export default withRouter(SignUp);

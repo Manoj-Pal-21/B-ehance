@@ -22,14 +22,16 @@
 
 .filter {
     font-size: 30px;
-    margin-top: 70px;
+    margin-top: 80px;
     margin-left: 80px;
+    padding-bottom: 0px;
 }
 .multi-card {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 50px;
+    margin-top: 20px;
 }
 .tamplate-container {
     padding: 10px;

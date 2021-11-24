@@ -1,15 +1,31 @@
 import React from 'react';
+import {withRouter} from 'react-router-dom';
 import './Form.css';
 
 class Login extends React.Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
 
         this.state = {
             email: "",
             password: ""
         }
+    };
+
+    handleInput = (event) => {
+        this.setState({ 
+            [event.target.name]: event.target.value
+        });
+        console.log(event.target.name, event.target.value);
+    };
+
+    handleSubmit = (event) => {
+        event.preventDefault();
+        console.log(this.state);
+        this.props.history.push("/");
     }
+
+
 
 
     render() {
@@ -21,11 +37,11 @@ class Login extends React.Component {
                         <form className="form-wrapper">
                             <div className="email">
                                 <label className="label">Email</label>
-                                <input className="input" type="email" name="email" onClick={this.handleInput} />
+                                <input className="input" type="email" name="email" onChange={this.handleInput} />
                             </div>
                             <div className="password">
                                 <label className="label">Password</label>
-                                <input className="input" type="password" name="password" onClick={this.handleInput} />
+                                <input className="input" type="password" name="password" onChange={this.handleInput} />
                             </div>
                             <div>
                                 <button className="submit" onClick={this.handleSubmit}>
@@ -43,4 +59,4 @@ class Login extends React.Component {
 
 
 
-export default Login;
+export default withRouter(Login);

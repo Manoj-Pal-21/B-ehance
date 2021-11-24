@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {BrowserRouter, Switch, Route} from "react-router-dom";
 import Login from "./Component/Login";
 import SignUp from "./Component/SignUp";
 import Header from "./Component/Header";
@@ -12,13 +12,13 @@ const App = () => {
     return (
       <BrowserRouter>
             <Header />
-            <Routes>
-              <Route exact path="/" element={<MainPage/>}/>
-              <Route path="/Discover" element={<Discover/>}/>
-              <Route path="/Jobs" element={<Jobs/>}/>   
-              <Route path="/Login" element={<Login/>}/>
-              <Route path="/SignUp" element={<SignUp/>}/>
-          </Routes>
+            <Switch>
+              <Route exact path="/" component={MainPage}/>
+              <Route path="/Discover" component={Discover}/>
+              <Route path="/Jobs" component={Jobs}/>   
+              <Route path="/Login" component={Login}/>
+              <Route path="/SignUp" component={SignUp}/>
+            </Switch>
         </BrowserRouter>
     )
 }
