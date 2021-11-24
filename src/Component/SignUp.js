@@ -9,7 +9,10 @@ class SignUp extends React.Component {
         this.state = {
             name:"",
             email:"",
-            password:""
+            password:"",
+            isNameEmpty: "",
+            isEmailEmpty: "",
+            isPwdEmpty: ""
         }
     };
 
@@ -24,6 +27,24 @@ class SignUp extends React.Component {
         event.preventDefault();
         if( this.state.name !== "" && this.state.email !== "" && this.state.password !== "" ){
             this.props.history.push("/login")
+        } else {
+            if(this.state.name === "") {
+                this.setState({isNameEmpty: true});
+            } else {
+                this.setState({isNameEmpty: ""});
+            };
+
+            if(this.state.email === "") {
+                this.setState({isEmailEmpty: true});
+            } else {
+                this.setState({isEmailEmpty: ""});
+            };
+
+            if(this.state.password === "") {
+                this.setState({isPwdEmpty: true});
+            } else {
+                this.setState({isPwdEmpty: ""});
+            };
         }
         // console.log(this.state);
     }
@@ -39,14 +60,26 @@ class SignUp extends React.Component {
                             <div className="name">
                                 <label className="label">Full Name</label>
                                 <input className="input" type="name" name="name" required="true" onChange={this.handleInput}/>
+                                {
+                                    this.state.isNameEmpty === true && 
+                                    <span className="please-field">Please fill this field</span>
+                                }
                             </div>
                             <div className="email">
-                                <label className="label">Email</label>
+                                <label className="label">Email</label>  
                                 <input className="input" type="email" name="email" required="true" onChange={this.handleInput} />
+                                {
+                                    this.state.isEmailEmpty === true && 
+                                    <span className="please-field">Please fill this field</span>
+                                }
                             </div>
                             <div className="password">
                                 <label className="label">Password</label>
                                 <input className="input" type="password" name="password" required="true" onChange={this.handleInput} />
+                                {
+                                    this.state.isPwdEmpty === true && 
+                                    <span className="please-field">Please fill this field</span>
+                                }
                             </div>
                             <div>
                                 <button className="submit" onClick={this.onSubmit}>
@@ -61,7 +94,4 @@ class SignUp extends React.Component {
     }
 
 }
-
-
-
 export default withRouter(SignUp);
