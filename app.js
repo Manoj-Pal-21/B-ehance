@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const port = process.env.port || 5900;
+const port = process.env.PORT || 5900;
 
 if (process.env.NODE_ENV === "production") {
     app.use(express.static('build'));
