@@ -48,7 +48,7 @@ function Jobs() {
         },
         {
             img: "../Images/Jobs7.png",
-            name: "knot just pictures LLP",
+            name: "knot just pictures",
             location: "Pune, India",
             title: "Photo editor",
             detail: "We are looking for Photo Editor"
@@ -97,7 +97,7 @@ function Jobs() {
                     <h5>Discover your next career move, freelance gig, or internship
                     </h5>
                 </div>
-                
+
             </div>
             <div><h4 className="filter">All Jobs 12 Result Clear filters</h4></div>
             <div className="multi-card">

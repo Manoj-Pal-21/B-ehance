@@ -82,9 +82,9 @@ li {
 }
 
 .card-container {
-    width: 400px;
+    width: 380px;
     height: 300px;
-    margin: 20px;
+    margin: 20px 10px;
     position: relative;
     
 }

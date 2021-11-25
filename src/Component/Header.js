@@ -1,5 +1,5 @@
 import React from 'react';
-import './Navbar.css';
+import './MainPage.css';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
