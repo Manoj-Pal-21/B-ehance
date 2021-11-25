@@ -81,6 +81,10 @@ li {
     outline: none;
 }
 
+#logout-btn {
+    margin-left: 50%;
+}
+
 .card-container {
     width: 380px;
     height: 300px;

@@ -105,7 +105,7 @@ function Jobs() {
                     tamplate.map((image, index) => {
                         return (
 
-                            <div className="tamplate-container">
+                            <div className="tamplate-container" key={index}>
                                 <div className="img-loc">
                                     <img src={image.img} alt="" />
                                     <div>

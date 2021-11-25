@@ -71,7 +71,7 @@ const Discover = () => {
             {
                 card.map((image, index) => {
                     return (
-                        <div className="card-container">
+                        <div className="card-container" key={index}>
                             <img src={image.imgsrc} alt="" />
                             <h3>{image.title}</h3>
                             <p>{image.author}</p>

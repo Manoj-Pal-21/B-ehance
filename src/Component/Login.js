@@ -25,6 +25,7 @@ class Login extends React.Component {
         event.preventDefault();
         // console.log(this.state);
         if(this.state.email !== "" && this.state.password !== "" ){
+            this.props.update(true);
             this.props.history.push("/");
         } else{
             if(this.state.email === "") {
